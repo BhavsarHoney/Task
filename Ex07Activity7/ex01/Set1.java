@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.TreeSet;
 
@@ -14,10 +15,12 @@ public class Set1 {
         {   String name =sc.next();
 			pname .add(name);
         }
-		for(String player:pname){
-			System.out.println(pname);
-            return;
-        }
+		
+		Iterator<String> set=pname.iterator();
+		while (set.hasNext())
+            System.out.print(set.next() + " \n");
+
+			System.out.println();
     sc.close();
 	}
 
